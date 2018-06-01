@@ -16,7 +16,7 @@ I graduated from Iowa State University in December 2017 with a bachelors in comp
 
 I am currently a Software Engineer at [Red Nova Labs](http://www.rednovalabs.com/team/gabby-ortman/)! I have been here since January and it's been a great time so far. I am on our accounting/data team and we're responsible for maintaining data integrity for our largest client (apparently the "SEC" gets "mad" when a company's "numbers" don't math out correctly). What this really involves is a lot of bug triaging and fixing, feature building, and data migrations (whoever trusted me to change 200k+ records in one script is a fool). All of my work is done in Ruby on a big Rails application. While the domain my team handles can be tough and outright confusing, I appreciate and value my team's flexibility, motivation, and helpfulness. There have also been rumors we may be starting to rewrite a bulk of our accounting system in Rust by the end of the year. 👀👀👀
 
-EDIT: Oddly enough, the day I published this I learned I was switching to our web team next week. There I will likely be working with React, API integrations, and the aforementioned Rails app. It should be a fun change of pace.
+EDIT: Oddly enough, the day I published this I learned I was switching to our web team next week. There I will likely be working with React, API integrations, and the aforementioned Rails app. It should be a fun change of pace. Probably
 
 ### Life
 

@@ -5,9 +5,76 @@
     <description>Gabby Ortman's Blog</description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 01 Jun 2018 18:43:55 +0000</pubDate>
-    <lastBuildDate>Fri, 01 Jun 2018 18:43:55 +0000</lastBuildDate>
+    <pubDate>Fri, 01 Jun 2018 18:54:02 +0000</pubDate>
+    <lastBuildDate>Fri, 01 Jun 2018 18:54:02 +0000</lastBuildDate>
     <generator>Jekyll v3.7.3</generator>
+    
+      <item>
+        <title>What Is Gabby Doing With Her Life?</title>
+        <description>&lt;h3 id=&quot;school&quot;&gt;School&lt;/h3&gt;
+
+&lt;p&gt;I graduated from Iowa State University in December 2017 with a bachelors in computer science. While college did not quite go as expected, I am proud of what I accomplished during my time on campus and am ecstatic to (finally) done.&lt;/p&gt;
+
+&lt;h3 id=&quot;work&quot;&gt;Work&lt;/h3&gt;
+
+&lt;p&gt;I am currently a Software Engineer at &lt;a href=&quot;http://www.rednovalabs.com/team/gabby-ortman/&quot;&gt;Red Nova Labs&lt;/a&gt;! I have been here since January and it’s been a great time so far. I am on our accounting/data team and we’re responsible for maintaining data integrity for our largest client (apparently the “SEC” gets “mad” when a company’s “numbers” don’t math out correctly). What this really involves is a lot of bug triaging and fixing, feature building, and data migrations (whoever trusted me to change 200k+ records in one script is a fool). All of my work is done in Ruby on a big Rails application. While the domain my team handles can be tough and outright confusing, I appreciate and value my team’s flexibility, motivation, and helpfulness. There have also been rumors we may be starting to rewrite a bulk of our accounting system in Rust by the end of the year. 👀👀👀&lt;/p&gt;
+
+&lt;p&gt;EDIT: Oddly enough, the day I published this I learned I was switching to our web team next week. There I will likely be working with React, API integrations, and the aforementioned Rails app. It should be a fun change of pace. Probably&lt;/p&gt;
+
+&lt;h3 id=&quot;life&quot;&gt;Life&lt;/h3&gt;
+
+&lt;p&gt;Immediately after graduation I started working full-time and moved to a small apartment somewhere in Kansas City, Missouri with my rabbit, Smalls, who runs freely through my apartment (and probably sneaks out in the middle of the night to meet with his cabal of inner city rabbits).&lt;/p&gt;
+
+&lt;p&gt;Despite all of my efforts during college, I had the toughest time sticking to a reliable and predictable schedule, which led nothing but chaos and stress and anxiety literally all the time. With that, a huge focus of mine post-graduation has been establishing predictability in my schedule.&lt;/p&gt;
+
+&lt;p&gt;Am I…&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Running regularly?&lt;/li&gt;
+  &lt;li&gt;Making myself “real” meals (i.e., something more substantial than cereal for dinner)?&lt;/li&gt;
+  &lt;li&gt;Maintaining a normal sleep schedule?&lt;/li&gt;
+  &lt;li&gt;Making a conscious effort to reach out to friends?&lt;/li&gt;
+  &lt;li&gt;Pursuing hobbies and goals?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;All super basic concepts…and yet…I could not manage to maintain any sense of consistency.&lt;/p&gt;
+
+&lt;p&gt;With respect to hobbies and goals, I think I am going to focus on a small handful this summer:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Learning Rust
+    &lt;ul&gt;
+      &lt;li&gt;Right now I am making a &lt;a href=&quot;https://github.com/nucle0tides/crab-shell&quot;&gt;small shell&lt;/a&gt; modeled after the shell I made for my Operating Systems class last semester. It’s just something to get acquainted with the language before diving into more complex projects.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Learning a little systems biology
+    &lt;ul&gt;
+      &lt;li&gt;I did not have enough discipline to pursue a double major during college, but a lot of my passion for computer science lies in the intersection between genetics and biology and computer science.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Running
+    &lt;ul&gt;
+      &lt;li&gt;Currently focusing on maintaining a realistic pace (i.e., not winding myself 10 minutes into the run because I’m going too fast) and upping the number of miles I run in a week.&lt;/li&gt;
+      &lt;li&gt;Also: enjoying the mornings before it gets disgustingly hot and humid outside. Thanks, Missouri.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Reading
+    &lt;ul&gt;
+      &lt;li&gt;Current goal is 30 minutes a day, either in the morning or at lunchtime.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Wed, 30 May 2018 00:00:00 +0000</pubDate>
+        <link>/articles/2018-05/what-am-i-doing</link>
+        <guid isPermaLink="true">/articles/2018-05/what-am-i-doing</guid>
+        
+        <category>update</category>
+        
+        <category>life</category>
+        
+        
+        <category>update</category>
+        
+      </item>
     
       <item>
         <title>Hello, World!</title>
