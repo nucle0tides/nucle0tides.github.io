@@ -4,6 +4,14 @@
 		"selected_items":
 		[
 			[
+				"post",
+				"post_order"
+			],
+			[
+				"child",
+				"child_node"
+			],
+			[
 				"p_",
 				"p_male\tstatement"
 			],
@@ -116,10 +124,10 @@
 	"buffers":
 	[
 		{
-			"file": "_drafts/2017-01-02-Basic-Security.md",
+			"file": "_drafts/2017-05-08-Basic-Security.md",
 			"settings":
 			{
-				"buffer_size": 7010,
+				"buffer_size": 7156,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -131,28 +139,47 @@
 				"buffer_size": 1490,
 				"line_ending": "Unix"
 			}
-		},
-		{
-			"file": "_drafts/2017-02-07-Sketchbooks.md",
-			"settings":
-			{
-				"buffer_size": 178,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
 		}
 	],
-	"build_system": "",
+	"build_system": "Packages/Python/Python.sublime-build",
 	"build_system_choices":
 	[
+		[
+			[
+				[
+					"Anaconda Python Builder",
+					""
+				],
+				[
+					"Packages/Python/Python.sublime-build",
+					""
+				],
+				[
+					"Packages/Python/Python.sublime-build",
+					"Syntax Check"
+				],
+				[
+					"Packages/User/latex.sublime-build",
+					""
+				]
+			],
+			[
+				"Packages/Python/Python.sublime-build",
+				""
+			]
+		]
 	],
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 92.0,
-		"last_filter": "install",
+		"height": 89.0,
+		"last_filter": "set syntax py",
 		"selected_items":
 		[
+			[
+				"set syntax py",
+				"Set Syntax: Python"
+			],
 			[
 				"install",
 				"Package Control: Install Package"
@@ -182,7 +209,7 @@
 				"Snippet: #!/usr/bin/env"
 			]
 		],
-		"width": 476.0
+		"width": 431.0
 	},
 	"console":
 	{
@@ -208,6 +235,9 @@
 	],
 	"file_history":
 	[
+		"/home/gabby/Desktop/trees.py",
+		"/home/gabby/Projects/nucle0tides.github.io/_drafts/2017-02-07-Sketchbooks.md",
+		"/home/gabby/delete.py",
 		"/home/gabby/Projects/nucle0tides.github.io/_drafts/2013-08-16-code-highlighting-post.md",
 		"/home/gabby/Projects/nucle0tides.github.io/_layouts/post.html",
 		"/home/gabby/Projects/nucle0tides.github.io/_sass/pages/_post.scss",
@@ -269,6 +299,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"ortmangl@gmail.com",
 			"blog",
 			"print"
 		],
@@ -288,33 +319,34 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 1,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "_drafts/2017-01-02-Basic-Security.md",
+					"file": "_drafts/2017-05-08-Basic-Security.md",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 7010,
+						"buffer_size": 7156,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								345,
-								345
+								4254,
+								4254
 							]
 						],
 						"settings":
 						{
 							"git_gutter_is_enabled": true,
-							"syntax": "Packages/Markdown/Markdown.sublime-syntax"
+							"syntax": "Packages/Markdown/Markdown.sublime-syntax",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 1296.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
@@ -343,36 +375,6 @@
 							"syntax": "Packages/YAML/YAML.sublime-syntax",
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "_drafts/2017-02-07-Sketchbooks.md",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 178,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								50,
-								50
-							]
-						],
-						"settings":
-						{
-							"git_gutter_is_enabled": true,
-							"open_with_edit": true,
-							"syntax": "Packages/Markdown/Markdown.sublime-syntax"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -415,6 +417,10 @@
 		]
 	},
 	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 278.0
+	},
 	"output.find_results":
 	{
 		"height": 0.0
