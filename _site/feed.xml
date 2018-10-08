@@ -3,47 +3,11 @@
   <channel>
     <title>~/blog</title>
     <description>Gabby Ortman's Blog</description>
-    <link>http://localhost:4000/</link>
-    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 08 Oct 2018 14:43:50 +0000</pubDate>
-    <lastBuildDate>Mon, 08 Oct 2018 14:43:50 +0000</lastBuildDate>
+    <link>/</link>
+    <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Thu, 15 Nov 2018 22:24:04 +0000</pubDate>
+    <lastBuildDate>Thu, 15 Nov 2018 22:24:04 +0000</lastBuildDate>
     <generator>Jekyll v3.7.3</generator>
-    
-      <item>
-        <title>Strange Loop and PLMW @ ICFP 2018</title>
-        <description>&lt;h3 id=&quot;overview&quot;&gt;Overview&lt;/h3&gt;
-
-&lt;h3 id=&quot;plmw--icfp&quot;&gt;PLMW @ ICFP&lt;/h3&gt;
-
-&lt;h3 id=&quot;strange-loop&quot;&gt;Strange Loop&lt;/h3&gt;
-
-&lt;h4 id=&quot;wednesday&quot;&gt;Wednesday&lt;/h4&gt;
-&lt;h6 id=&quot;papers-we-love&quot;&gt;Papers We Love&lt;/h6&gt;
-
-&lt;h6 id=&quot;software-with-a-mission&quot;&gt;Software With a Mission&lt;/h6&gt;
-
-&lt;h6 id=&quot;city-museum&quot;&gt;City Museum&lt;/h6&gt;
-
-&lt;h4 id=&quot;thursday&quot;&gt;Thursday&lt;/h4&gt;
-
-&lt;h4 id=&quot;friday&quot;&gt;Friday&lt;/h4&gt;
-</description>
-        <pubDate>Wed, 08 Aug 2018 00:00:00 +0000</pubDate>
-        <link>http://localhost:4000/articles/2018-08/strange-loop</link>
-        <guid isPermaLink="true">http://localhost:4000/articles/2018-08/strange-loop</guid>
-        
-        <category>conferences</category>
-        
-        <category>technology</category>
-        
-        <category>st. louis</category>
-        
-        
-        <category>technology</category>
-        
-        <category>conferences</category>
-        
-      </item>
     
       <item>
         <title>Hello, World!</title>
@@ -52,8 +16,8 @@
 &lt;p&gt;This is a blog. I may or may not use it. Here is its first post.&lt;/p&gt;
 </description>
         <pubDate>Sun, 01 Jan 2017 00:00:00 +0000</pubDate>
-        <link>http://localhost:4000/articles/2017-01/hello-world</link>
-        <guid isPermaLink="true">http://localhost:4000/articles/2017-01/hello-world</guid>
+        <link>/articles/2017-01/hello-world</link>
+        <guid isPermaLink="true">/articles/2017-01/hello-world</guid>
         
         <category>intro</category>
         
