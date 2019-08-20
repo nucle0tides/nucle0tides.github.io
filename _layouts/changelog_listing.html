@@ -1,0 +1,17 @@
+---
+layout: default
+---
+<section>
+  <header>
+  <h1>CHANGELOG</h1>
+</header>
+</section>
+{% for log in site.logs %}
+<section class="post">
+  <header class="post-header">
+    <h4>
+      - <a href="{{ site.url }}{{ log.url }}" class="post-title" title="{{ log.date | date: "%-d %b %Y" | upcase }}">{{ log.date | date: "%-d %b %Y" | upcase }} </a>
+    </h4>
+    </header>
+</section>
+{% endfor %}

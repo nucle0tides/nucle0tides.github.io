@@ -7,7 +7,12 @@ title: ~/blog
 email:
 description: Gabby Ortman's Blog
 url: # the base hostname & protocol for your site
-
+collections:
+  posts:
+    output: true
+  logs:
+    output: true
+    permalink: /changelog/logs/:year-:month-:day
 
 #
 ###################################

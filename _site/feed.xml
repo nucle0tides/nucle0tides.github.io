@@ -5,9 +5,28 @@
     <description>Gabby Ortman's Blog</description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 05 Mar 2019 15:31:04 +0000</pubDate>
-    <lastBuildDate>Tue, 05 Mar 2019 15:31:04 +0000</lastBuildDate>
+    <pubDate>Tue, 20 Aug 2019 16:13:17 +0000</pubDate>
+    <lastBuildDate>Tue, 20 Aug 2019 16:13:17 +0000</lastBuildDate>
     <generator>Jekyll v3.7.3</generator>
+    
+      <item>
+        <title>First Post, For Real This Time</title>
+        <description>&lt;h3 id=&quot;hello-world&quot;&gt;hello, world!&lt;/h3&gt;
+
+&lt;p&gt;i’m not one to keep a public log. i prefer more ephemeral logs: self-destructing tweets, journals haphazardly thrown into fires, post it notes left behind at at random cafes. i’m kind of in a weird, melancholic place right now. despite consistent exercise, sleep, eating, and socializing, i haven’t been feeling particularly great lately (to put it lightly) – especially my work and overall career trajectory. there was a point in time where i genuinely enjoyed creating toy projects and honing in my computer science skills in my spare time and i’ve lost touch with that.&lt;/p&gt;
+
+&lt;p&gt;while i combat what feels like a burnout of sorts, i’ve decided to copy &lt;a href=&quot;https://ageof.info/logs/&quot;&gt;elias&lt;/a&gt; and keep a little &lt;a href=&quot;/changelog&quot;&gt;changelog&lt;/a&gt;. my intention is to use the changelog as a tool alongside daily journaling and other means of tracking to show myself things genuinely are better than i perceive them to be in the moment.&lt;/p&gt;
+</description>
+        <pubDate>Mon, 12 Aug 2019 00:00:00 +0000</pubDate>
+        <link>/articles/2019-08/update</link>
+        <guid isPermaLink="true">/articles/2019-08/update</guid>
+        
+        <category>update</category>
+        
+        
+        <category>ramblings</category>
+        
+      </item>
     
       <item>
         <title>Hello, World!</title>
