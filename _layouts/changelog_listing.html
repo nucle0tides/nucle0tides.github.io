@@ -6,12 +6,11 @@ layout: default
   <h1>CHANGELOG</h1>
 </header>
 </section>
-{% for log in site.logs %}
-<section class="post">
-  <header class="post-header">
-    <h4>
-      - <a href="{{ site.url }}{{ log.url }}" class="post-title" title="{{ log.date | date: "%-d %b %Y" | upcase }}">{{ log.date | date: "%-d %b %Y" | upcase }} </a>
-    </h4>
-    </header>
-</section>
+{% assign entries = site.logs | sort: 'date' | reverse %}
+{% for log in entries %}
+<ul>
+  <li>
+      <a href="{{ site.url }}{{ log.url }}" class="post-title" title="{{ log.date | date: "%-d %b %Y" | upcase }}">{{ log.date | date: "%-d %b %Y" | upcase }} </a>
+  </li>
+</ul>
 {% endfor %}
