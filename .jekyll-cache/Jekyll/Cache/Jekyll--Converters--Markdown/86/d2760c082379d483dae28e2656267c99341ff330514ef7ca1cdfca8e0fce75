@@ -1,0 +1,20 @@
+I"{<h3 id="work">work</h3>
+
+<ul>
+  <li>today i fixed a css style loading issue. it was honestly an unfocused mess between having to figure out how to build our app with production settings, why it wasn’t connecting to mongo locally (hint: SSL flags that i had to hunt down in my team’s slack history), high key panicking about <em>actually</em> having to dive into webpack and applicable doing research, an all hands meeting in the middle of the day, and lots of <em>build, refresh, cry</em> on repeat. my teammate’s inital guess that we were having a css specificity issue was correct, though, so go him.</li>
+</ul>
+
+<h3 id="non-work">non-work</h3>
+
+<ul>
+  <li>elias and i went to port fonda for dinner. i got the sopa azteca and elias got mole. it was <em>so good</em>. we ate too much for people who planned on running in 90F heat later in the evening though.</li>
+  <li>after dinner, i took pius for a short walk. my intention was to walk him to the plaza and back but the .5mi we already walked was clearly already too much for him.</li>
+</ul>
+
+<h3 id="exercise">exercise</h3>
+
+<ul>
+  <li>i did my short run last night as promised, but i cut it super short because the heat index was 100F at 9p (lol).</li>
+  <li>elias and i ran about 4mi at a 11:25/mi pace. in normal conditions, this would have been a super easy run, but the sopa and heat started to get to me after ~3 miles. 🤢</li>
+</ul>
+:ET
