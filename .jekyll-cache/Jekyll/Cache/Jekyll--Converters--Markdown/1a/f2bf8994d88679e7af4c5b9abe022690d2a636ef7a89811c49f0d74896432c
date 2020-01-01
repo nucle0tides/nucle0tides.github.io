@@ -1,0 +1,38 @@
+I"#	<h1 id="first-cold-of-the-season">first cold of the season</h1>
+
+<p>the last week has been a lot. last sunday (oct 13) i woke up with a familiar and unwelcome tickle in my throat. i was coming down with a cold. the bulk of my suffering was over by wednesday, but i still had a ton of congestion.</p>
+
+<h1 id="rust-belt-rust---dayton-ohio">rust belt rust - dayton, ohio</h1>
+
+<ul>
+  <li>on thursday, elias, pius, and i traveled to dayton, ohio for rust belt rust.</li>
+  <li>on friday, elias held his workshop on making a toy lisp in rust using parser combinators. it had a rough start, he had to use my laptop for a while, but once he had a laptop, he made a stellar recovery.
+    <ul>
+      <li>it’s clear he put in so much work and consideration into his workshop and i want him to refine it and hold it at another conference in the future</li>
+      <li>while i didn’t get to really participate, i was super inspired to write a few parser combinators of my own. 👀</li>
+    </ul>
+  </li>
+  <li>day of the talks was long and great. some of my favorites include:
+    <ul>
+      <li>jess (@TooManyBees) gave a lightning talk about creative coding. this one was super cool to me because i bought a book on creative coding in processing that i haven’t touched yet.</li>
+      <li>niko (@nikomatsakis) gave a talk about the rust borrow checker and how they’re redefining how the borrow checker finds memory errors.</li>
+      <li>grey (@QuietMisdreavus) talked about the history and their time working on maintaining docs.rs.</li>
+      <li>steven (@srwaltergave) a cool talk about integrating rust into legacy systems. he works at lexmark and spoke of the crazy memory constraints and clever compilation tricks they needed to do to fit rust on a printer.</li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="my-poor-little-focus">my poor little focus</h1>
+
+<ul>
+  <li>about 200mi outside kansas city, my car lurched, went into a low gear (i.e., high RPM), and flashed a transmission fault message while we were traveling 70mph down the interstate.
+    <ul>
+      <li>this has happened before…also while going 70mph down the highway</li>
+      <li>i got my [mom’s] insurance company to help me get a tow</li>
+      <li>elias’ mom picked us up</li>
+      <li>we didn’t get home until 2:30a.</li>
+      <li>sigh</li>
+    </ul>
+  </li>
+</ul>
+:ET
