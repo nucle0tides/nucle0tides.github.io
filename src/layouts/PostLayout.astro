@@ -1,0 +1,28 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import type { CollectionEntry } from 'astro:content';
+
+interface Props {
+  post: CollectionEntry<'posts'>;
+}
+
+const { post } = Astro.props;
+const { title, modified, tags } = post.data;
+---
+
+<BaseLayout title={`${title} | ~/blog`}>
+  <article class="post">
+    <header class="post-header">
+      <h1>{title}</h1>
+      {modified && <time datetime={modified.toISOString()}>{modified.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</time>}
+      {tags && tags.length > 0 && (
+        <div class="tags">
+          {tags.map((tag) => <span class="tag">{tag}</span>)}
+        </div>
+      )}
+    </header>
+    <div class="post-content">
+      <slot />
+    </div>
+  </article>
+</BaseLayout>
