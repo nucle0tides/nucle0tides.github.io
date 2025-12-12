@@ -1,9 +1,12 @@
 ---
+import '98.css';
+
 interface Props {
   title?: string;
+  windowTitle?: string;
 }
 
-const { title = '~/blog' } = Astro.props;
+const { title = '~/blog', windowTitle = 'explorer.exe' } = Astro.props;
 
 const owner = {
   name: 'Gabby Ortman',
@@ -22,26 +25,46 @@ const owner = {
     <link rel="stylesheet" href="/styles/main.css" />
   </head>
   <body>
-    <div class="container">
-      <aside class="sidebar">
-        <div class="sidebar-content">
-          <a href="/" class="author-name">{owner.name}</a>
-          <p class="author-bio">{owner.bio}</p>
-          <p class="author-job">{owner.job}</p>
-          <nav class="nav">
-            <ul>
-              <li><a href="/">home</a></li>
-              <li><a href="/posts">posts</a></li>
-            </ul>
-          </nav>
-          <div class="social-links">
-            <a href={`https://github.com/${owner.github}`}>github</a>
+    <div class="desktop">
+      <!-- About window -->
+      <div class="window about-window">
+        <div class="title-bar">
+          <div class="title-bar-text">about.exe</div>
+          <div class="title-bar-controls">
+            <button aria-label="Minimize"></button>
+            <button aria-label="Maximize"></button>
+            <button aria-label="Close"></button>
           </div>
         </div>
-      </aside>
-      <main class="main-content">
-        <slot />
-      </main>
+        <div class="window-body">
+          <p class="author-name">{owner.name}</p>
+          <p class="author-bio">{owner.bio}</p>
+          <p class="author-job">{owner.job}</p>
+          <hr />
+          <nav>
+            <ul class="tree-view">
+              <li><a href="/">home</a></li>
+              <li><a href="/posts">posts</a></li>
+              <li><a href={`https://github.com/${owner.github}`}>github</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+
+      <!-- Main content window -->
+      <div class="window content-window">
+        <div class="title-bar">
+          <div class="title-bar-text">{windowTitle}</div>
+          <div class="title-bar-controls">
+            <button aria-label="Minimize"></button>
+            <button aria-label="Maximize"></button>
+            <button aria-label="Close"></button>
+          </div>
+        </div>
+        <div class="window-body">
+          <slot />
+        </div>
+      </div>
     </div>
   </body>
 </html>

@@ -7,20 +7,45 @@ const posts = (await getCollection('posts')).sort(
 );
 ---
 
-<BaseLayout>
-  <h1>posts</h1>
-  <ul class="post-list">
-    {posts.map((post) => (
-      <li>
-        <a href={`/posts/${post.slug}`}>
-          <span class="post-title">{post.data.title}</span>
-          {post.data.modified && (
-            <time datetime={post.data.modified.toISOString()}>
-              {post.data.modified.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' })}
-            </time>
-          )}
-        </a>
-      </li>
-    ))}
-  </ul>
+<BaseLayout windowTitle="C:\posts">
+  <div class="explorer">
+    <div class="explorer-toolbar">
+      <span>Address:</span>
+      <input type="text" value="C:\posts" readonly class="address-bar" />
+    </div>
+    <table class="file-list">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Date Modified</th>
+          <th>Type</th>
+          <th>Size</th>
+        </tr>
+      </thead>
+      <tbody>
+        {posts.map((post) => (
+          <tr>
+            <td>
+              <a href={`/posts/${post.slug}`} class="file-link">
+                <span class="file-icon">📄</span>
+                {post.slug}.txt
+              </a>
+            </td>
+            <td>
+              {post.data.modified?.toLocaleDateString('en-US', {
+                month: '2-digit',
+                day: '2-digit',
+                year: 'numeric'
+              })}
+            </td>
+            <td>Text Document</td>
+            <td>1 KB</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+    <div class="status-bar">
+      <span>{posts.length} object(s)</span>
+    </div>
+  </div>
 </BaseLayout>
