@@ -1,19 +1,14 @@
 ---
 import '98.css';
+import AboutWindow from '../components/AboutWindow.astro';
 
 interface Props {
   title?: string;
   windowTitle?: string;
 }
 
-const { title = '~/blog', windowTitle = 'explorer.exe' } = Astro.props;
-
-const owner = {
-  name: 'Gabby Ortman',
-  bio: "there's no place like ~/",
-  job: 'Senior Software Engineer @ Pipe',
-  github: 'nucle0tides',
-};
+const { windowTitle = 'explorer.exe' } = Astro.props;
+const title = Astro.props.title ?? windowTitle;
 ---
 
 <!DOCTYPE html>
@@ -26,30 +21,7 @@ const owner = {
   </head>
   <body>
     <div class="desktop">
-      <!-- About window -->
-      <div class="window about-window">
-        <div class="title-bar">
-          <div class="title-bar-text">about.exe</div>
-          <div class="title-bar-controls">
-            <button aria-label="Minimize"></button>
-            <button aria-label="Maximize"></button>
-            <button aria-label="Close"></button>
-          </div>
-        </div>
-        <div class="window-body">
-          <p class="author-name">{owner.name}</p>
-          <p class="author-bio">{owner.bio}</p>
-          <p class="author-job">{owner.job}</p>
-          <hr />
-          <nav>
-            <ul class="tree-view">
-              <li><a href="/">home</a></li>
-              <li><a href="/posts">posts</a></li>
-              <li><a href={`https://github.com/${owner.github}`}>github</a></li>
-            </ul>
-          </nav>
-        </div>
-      </div>
+      <AboutWindow />
 
       <!-- Main content window -->
       <div class="window content-window">
@@ -65,6 +37,44 @@ const owner = {
           <slot />
         </div>
       </div>
+
+      <!-- Taskbar -->
+      <div class="taskbar">
+        <button class="start-button">
+          <span class="start-icon">🪟</span>
+          Start
+        </button>
+        <div class="taskbar-divider"></div>
+        <div class="taskbar-buttons">
+          <a href="/" class="taskbar-button">
+            <span>📁</span> home
+          </a>
+          <a href="/posts" class="taskbar-button">
+            <span>📄</span> posts
+          </a>
+          <a href="https://github.com/nucle0tides" class="taskbar-button">
+            <span>🌐</span> github
+          </a>
+        </div>
+        <div class="system-tray">
+          <span class="tray-time" id="tray-time"></span>
+        </div>
+      </div>
     </div>
+
+    <script>
+      function updateTime() {
+        const now = new Date();
+        const time = now.toLocaleTimeString('en-US', {
+          hour: 'numeric',
+          minute: '2-digit',
+          hour12: true
+        });
+        const el = document.getElementById('tray-time');
+        if (el) el.textContent = time;
+      }
+      updateTime();
+      setInterval(updateTime, 1000);
+    </script>
   </body>
 </html>
