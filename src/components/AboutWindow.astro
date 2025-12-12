@@ -1,0 +1,24 @@
+---
+const owner = {
+  name: "Gabby Ortman",
+  bio: "there's no place like ~/",
+  job: "Senior Software Engineer @ Pipe",
+  github: "nucle0tides",
+};
+---
+
+<div class="window about-window">
+  <div class="title-bar">
+    <div class="title-bar-text">about.exe</div>
+    <div class="title-bar-controls">
+      <button aria-label="Minimize"></button>
+      <button aria-label="Maximize"></button>
+      <button aria-label="Close"></button>
+    </div>
+  </div>
+  <div class="window-body">
+    <p class="author-name">{owner.name}</p>
+    <p class="author-bio">{owner.bio}</p>
+    <p class="author-job">{owner.job}</p>
+  </div>
+</div>

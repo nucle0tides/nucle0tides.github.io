@@ -1,0 +1,30 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import type { CollectionEntry } from 'astro:content';
+
+interface Props {
+  post: CollectionEntry<'posts'>;
+}
+
+const { post } = Astro.props;
+const { title, modified } = post.data;
+---
+
+<BaseLayout title={`${title} | Gabby Ortman`} windowTitle={`${post.slug}.txt - Notepad`}>
+  <div class="notepad">
+    <div class="notepad-menu">
+      <span class="menu-item">File</span>
+      <span class="menu-item">Edit</span>
+      <span class="menu-item">Search</span>
+      <span class="menu-item">Help</span>
+    </div>
+    <div class="notepad-content">
+      <div class="notepad-text">
+        <p class="notepad-title">{title}</p>
+        {modified && <p class="notepad-date">{modified.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</p>}
+        <p class="notepad-separator">---</p>
+        <slot />
+      </div>
+    </div>
+  </div>
+</BaseLayout>
