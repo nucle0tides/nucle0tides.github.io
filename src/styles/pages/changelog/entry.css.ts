@@ -1,5 +1,5 @@
 import { style, globalStyle } from '@vanilla-extract/css';
-import { vars } from '../../styles/theme.css';
+import { vars } from '../../theme.css';
 
 export const navigation = style({
   display: 'flex',

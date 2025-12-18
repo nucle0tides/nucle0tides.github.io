@@ -1,7 +1,7 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getCollection } from 'astro:content';
-import * as styles from './[...slug].css';
+import * as styles from '../../styles/pages/changelog/entry.css';
 
 export async function getStaticPaths() {
   const entries = await getCollection('changelog');
