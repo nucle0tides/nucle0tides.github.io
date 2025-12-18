@@ -1,30 +1,43 @@
 ---
-import BaseLayout from './BaseLayout.astro';
-import type { CollectionEntry } from 'astro:content';
+import BaseLayout from "./BaseLayout.astro";
+import PostHeader from "../components/PostHeader.astro";
+import type { CollectionEntry } from "astro:content";
+import * as styles from "./PostLayout.css";
 
 interface Props {
-  post: CollectionEntry<'posts'>;
+  post: CollectionEntry<"posts">;
 }
 
 const { post } = Astro.props;
-const { title, modified } = post.data;
+const { title, modified, headerImage } = post.data;
 ---
 
-<BaseLayout title={`${title} | Gabby Ortman`} windowTitle={`${post.slug}.txt - Notepad`}>
-  <div class="notepad">
-    <div class="notepad-menu">
-      <span class="menu-item">File</span>
-      <span class="menu-item">Edit</span>
-      <span class="menu-item">Search</span>
-      <span class="menu-item">Help</span>
+<BaseLayout
+  title={`~/posts/${title}`}
+  description={post.data.excerpt}
+>
+  <article class={styles.article}>
+    {
+      headerImage ? (
+        <PostHeader title={title} image={headerImage} date={modified} />
+      ) : (
+        <header class={styles.postHeader}>
+          {modified && (
+            <time class={styles.postDate} datetime={modified.toISOString()}>
+              {modified.toLocaleDateString("en-US", {
+                year: "numeric",
+                month: "long",
+                day: "numeric",
+                timeZone: "UTC",
+              })}
+            </time>
+          )}
+          <h1 class={styles.postTitle}>{title}</h1>
+        </header>
+      )
+    }
+    <div>
+      <slot />
     </div>
-    <div class="notepad-content">
-      <div class="notepad-text">
-        <p class="notepad-title">{title}</p>
-        {modified && <p class="notepad-date">{modified.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</p>}
-        <p class="notepad-separator">---</p>
-        <slot />
-      </div>
-    </div>
-  </div>
+  </article>
 </BaseLayout>

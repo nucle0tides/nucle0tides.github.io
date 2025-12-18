@@ -1,0 +1,39 @@
+---
+import * as styles from './Navbar.css';
+
+interface NavItem {
+  href: string;
+  label: string;
+}
+
+const navItems: NavItem[] = [
+  { href: '/', label: 'home' },
+  { href: '/posts', label: 'posts' },
+  { href: '/changelog', label: 'changelog' },
+  { href: '/now', label: 'now' },
+];
+
+const currentPath = Astro.url.pathname;
+
+function isActive(href: string): boolean {
+  if (href === '/') {
+    return currentPath === '/';
+  }
+  return currentPath === href || currentPath.startsWith(href + '/');
+}
+---
+
+<nav class={styles.navbar}>
+  <a href="/" class={styles.logo}>🐰</a>
+  <div class={styles.navLinks}>
+    {navItems.map((item, index) => (
+      <>
+        {index > 0 && <span class={styles.separator}>•</span>}
+        <a
+          href={item.href}
+          class={isActive(item.href) ? styles.activeLink : ''}
+        >{item.label}</a>
+      </>
+    ))}
+  </div>
+</nav>

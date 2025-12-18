@@ -1,0 +1,40 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHeader from '../../components/PageHeader.astro';
+import { getCollection } from 'astro:content';
+import * as styles from './index.css';
+
+const entries = (await getCollection('changelog')).sort(
+  (a, b) => b.data.timestamp.valueOf() - a.data.timestamp.valueOf()
+);
+
+const grouped = entries.reduce((acc, entry) => {
+  const key = entry.data.timestamp.toLocaleDateString('en-US', { year: 'numeric', month: 'short', timeZone: 'UTC' });
+  if (!acc[key]) acc[key] = [];
+  acc[key].push(entry);
+  return acc;
+}, {} as Record<string, typeof entries>);
+
+const formatDate = (date: Date) =>
+  `${String(date.getUTCMonth() + 1).padStart(2, '0')} • ${String(date.getUTCDate()).padStart(2, '0')} • ${String(date.getUTCFullYear()).slice(-2)}`;
+---
+
+<BaseLayout title="~/changelog/" description="micro-updates from my day">
+  <PageHeader title="changelog" />
+  {Object.entries(grouped).map(([month, monthEntries]) => (
+    <section class={styles.monthSection}>
+      <h2 class={styles.monthTitle}>{month}</h2>
+      <ul class={styles.changelogList}>
+        {monthEntries.map((entry) => (
+          <li class={styles.changelogEntry}>
+            <a href={`/changelog/${entry.slug}`}>
+              <time datetime={entry.data.timestamp.toISOString()}>
+                {formatDate(entry.data.timestamp)}
+              </time>
+            </a>
+          </li>
+        ))}
+      </ul>
+    </section>
+  ))}
+</BaseLayout>

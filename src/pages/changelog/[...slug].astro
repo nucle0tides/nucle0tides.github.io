@@ -1,0 +1,66 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+import * as styles from './[...slug].css';
+
+export async function getStaticPaths() {
+  const entries = await getCollection('changelog');
+  const sorted = entries.sort((a, b) => b.data.timestamp.valueOf() - a.data.timestamp.valueOf());
+
+  return sorted.map((entry, index) => ({
+    params: { slug: entry.slug },
+    props: {
+      entry,
+      prev: sorted[index + 1] ?? null,
+      next: sorted[index - 1] ?? null,
+    },
+  }));
+}
+
+const { entry, prev, next } = Astro.props;
+const { Content } = await entry.render();
+const { timestamp, weather, coffee } = entry.data;
+
+const formatDate = (date: Date) =>
+  `${String(date.getUTCMonth() + 1).padStart(2, '0')}-${String(date.getUTCDate()).padStart(2, '0')}-${String(date.getUTCFullYear()).slice(-2)}`;
+
+const formatDisplayDate = (date: Date) =>
+  date.toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', timeZone: 'UTC' });
+
+const formatTime = (date: Date) =>
+  date.toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit', timeZone: 'UTC' });
+---
+
+<BaseLayout title={`~/changelog/${formatDate(timestamp)}`}>
+  <article>
+    <nav class={styles.navigation}>
+      {prev ? (
+        <a href={`/changelog/${prev.slug}`} class={styles.navLink}>&larr;</a>
+      ) : (
+        <span class={styles.navLinkDisabled}>&larr;</span>
+      )}
+      {next ? (
+        <a href={`/changelog/${next.slug}`} class={styles.navLink}>&rarr;</a>
+      ) : (
+        <span class={styles.navLinkDisabled}>&rarr;</span>
+      )}
+    </nav>
+    <header>
+      <ul class={styles.metaList}>
+        <li>{timestamp.toLocaleDateString('en-US', { weekday: 'long', timeZone: 'UTC' })}</li>
+        <li>
+          <time datetime={timestamp.toISOString()}>
+            {`${String(timestamp.getUTCMonth() + 1).padStart(2, '0')}-${String(timestamp.getUTCDate()).padStart(2, '0')}-${timestamp.getUTCFullYear()}`}
+          </time>
+        </li>
+        <li>{formatTime(timestamp)}</li>
+        {weather && <li>{weather}</li>}
+        {coffee !== undefined && <li>{coffee} cup{coffee !== 1 ? 's' : ''} of coffee (so far)</li>}
+      </ul>
+    </header>
+    <div class={styles.content}>
+      <Content />
+    </div>
+    <a href="/changelog" class={styles.backLink}>&larr; back to changelog</a>
+  </article>
+</BaseLayout>
